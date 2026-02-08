@@ -17,6 +17,8 @@
 
 ## 🎨 Welcome to the Dashboard Gallery!
 
+
+
 This repository is dedicated to sharing beautiful and functional Obsidian dashboards that you can easily use in your own vault.
 
 **How simple is it?** Just clone this repository, pick the dashboard you like, and copy both the `.md` file and its corresponding `.css` file to your Obsidian vault. That's it! No complex setup, no advanced knowledge required.
@@ -47,7 +49,8 @@ A bold, brutalist-style dashboard with vibrant colors, weather widget, clock, an
 <details>
 <summary>🎥 Click to see video preview</summary>
 
-![Dashboard-Brutalist](images/Dashboard-Brutalist.mp4)
+[![Dashboard-Brutalist](images/Dashboard-Brutalist.mp4)](https://github.com/user-attachments/assets/f1a80f93-8bb6-4fbd-b2ef-7e1eacb59344
+)
 
 </details>
 
