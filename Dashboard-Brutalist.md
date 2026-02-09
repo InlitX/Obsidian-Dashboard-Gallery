@@ -1,8 +1,4 @@
-%% [[Estudios-Dashboard]] %%
-%% [[Proyectos-Dashboard]] %%
-%% [[Gamificación-Dashboard]] %%
-%% [[Gym-Dashboard]] %%
-%% [[Dasy]] %%
+
 
 ```dataviewjs
 // ============================================
@@ -11,7 +7,7 @@
 
 async function getWeather() {
   const savedApiKey = localStorage.getItem('weather-api-key');
-  const apiKey = savedApiKey || '293307b09cdbd1639fb8f6f6dd99525c';
+  const apiKey = savedApiKey || '';
   const savedCity = localStorage.getItem('weather-city') || 'barcelona';
   const savedUnits = localStorage.getItem('weather-units') || 'metric';
   const savedLang = localStorage.getItem('weather-lang') || 'es';
