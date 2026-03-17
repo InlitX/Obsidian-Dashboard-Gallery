@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian Dashboard Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg"></div>
+
+    <main>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">Obsidian Dashboard Gallery</span>
+        </div>
+
+        <!-- Tag -->
+        <div class="tag">
+            <span></span>
+            Coming Soon
+        </div>
+
+        <!-- Heading -->
+        <h1>
+            Beautiful dashboards<br>
+            <span>for Obsidian</span>
+            <img src="images/logo.png" alt="" class="floating-img">
+            <img src="images/element1.png" alt="" class="floating-img-2">
+            <img src="images/element2.png" alt="" class="floating-img-3">
+            <img src="images/element3.png" alt="" class="floating-img-4">
+            <img src="images/element4.png" alt="" class="floating-img-5">
+            <img src="images/element5.png" alt="" class="floating-img-6">
+        </h1>
+
+        <!-- Description -->
+        <p>
+            A collection of beautiful and functional dashboards for your Obsidian vault.
+            Copy, paste, and enjoy. No complex setup required.
+        </p>
+
+        <!-- Features -->
+        <div class="features">
+            <span>Plug & Play</span>
+            <span>Dataview</span>
+            <span>Minimal</span>
+            <span>Free</span>
+        </div>
+
+        <!-- Buttons -->
+        <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            View Repository
+        </a>
+
+        <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="star-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+            </svg>
+            <span id="stars">Star</span>
+        </a>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with care for the Obsidian community</p>
+            <p>&copy; 2026 <a href="https://github.com/InlitX">InlitX</a></p>
+        </footer>
+    </main>
+
+    <!-- GitHub Stars API -->
+    <script>
+        fetch('https://api.github.com/repos/InlitX/Obsidian-Dashboard-Gallery')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('stars').textContent = data.stargazers_count + ' Stars';
+            })
+            .catch(() => {
+                document.getElementById('stars').textContent = 'Star';
+            });
+    </script>
+</body>
+</html>
