@@ -3,84 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obsidian Dashboard Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Obsidian Dashboard Gallery - Free Dashboards for Obsidian</title>
+    <meta name="description" content="A collection of beautiful, free dashboards for Obsidian. Plug & Play, no complex setup required. Download Brutalist, Komoribe, Zen and more.">
+    <meta name="keywords" content="Obsidian, dashboard, plugin, dataview, notes, productivity, theme">
+    <meta name="author" content="InlitX">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Obsidian Dashboard Gallery">
+    <meta property="og:description" content="Beautiful, free dashboards for your Obsidian vault. Copy, paste, enjoy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://obsidian-dashboard-gallery.vercel.app">
+    <meta property="og:image" content="https://raw.githubusercontent.com/InlitX/Obsidian-Dashboard-Gallery/main/images/dashboards/Dashboard-Brutalist.png">
+    <meta property="og:locale" content="en_US">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obsidian Dashboard Gallery">
+    <meta name="twitter:description" content="Beautiful, free dashboards for your Obsidian vault.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/InlitX/Obsidian-Dashboard-Gallery/main/images/dashboards/Dashboard-Brutalist.png">
+    
+    <link rel="canonical" href="https://obsidian-dashboard-gallery.vercel.app">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Background -->
     <div class="bg"></div>
 
+    <header class="header">
+        <div class="header-left">
+            <a href="#" class="logo-link">
+                <img src="images/logo.png" alt="Logo" class="header-logo">
+                <span class="logo-text">Obsidian Gallery</span>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                <span data-i18n="header.repo">Repo</span>
+            </a>
+            <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn star-btn-header">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+                </svg>
+                <span id="stars-header">Star</span>
+            </a>
+            <div class="lang-dropdown">
+                <button class="lang-trigger header-btn" id="langTrigger">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                        <path d="M2 12h20M12 2c2.5 2.5 4 6 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6-4-10s1.5-7.5 4-10z" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                    </svg>
+                    <span id="currentLangLabel">EN</span>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                    <button class="lang-option" data-lang="fr">Francais</button>
+                    <button class="lang-option" data-lang="de">Deutsch</button>
+                    <button class="lang-option" data-lang="it">Italiano</button>
+                    <button class="lang-option" data-lang="pt">Portugues</button>
+                    <button class="lang-option" data-lang="zh">Zhongwen</button>
+                    <button class="lang-option" data-lang="ja">Nihongo</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <main>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo" class="logo-img">
-            <span class="logo-text">Obsidian Dashboard Gallery</span>
+        <div class="hero">
+            <div class="tag">
+                <span></span>
+                <span data-i18n="hero.tag">Coming Soon</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span data-i18n="hero.title">Dashboards</span><br>
+                <span class="title-accent" data-i18n="hero.titleAccent">for Obsidian</span>
+                <img src="images/elements/element1.png" alt="" class="floating-img-2">
+                <img src="images/elements/element2.png" alt="" class="floating-img-3">
+                <img src="images/elements/element3.png" alt="" class="floating-img-4">
+                <img src="images/elements/element4.png" alt="" class="floating-img-5">
+                <img src="images/elements/element5.png" alt="" class="floating-img-6">
+            </h1>
+
+            <p class="hero-desc" data-i18n="hero.desc">A collection of beautiful and functional dashboards for your Obsidian vault. Copy, paste, and enjoy. No complex setup required.</p>
+
+            <div class="features">
+                <span data-i18n="features.plugPlay">Plug & Play</span>
+                <span data-i18n="features.dataview">Dataview</span>
+                <span data-i18n="features.minimal">Minimal</span>
+                <span data-i18n="features.free">Free</span>
+            </div>
         </div>
 
-        <!-- Tag -->
-        <div class="tag">
-            <span></span>
-            Coming Soon
+        <section class="hero-gallery">
+            <div class="hero-gallery-3d">
+                <div class="hero-img hero-img-left">
+                    <img src="images/dashboards/Dashboard-Brutalist/Dashboard-Brutalist.png" alt="Dashboard Brutalist">
+                </div>
+                <div class="hero-img hero-img-center">
+                    <img src="images/dashboards/komoribe/komoribe.png" alt="Dashboard Komoribe">
+                </div>
+                <div class="hero-img hero-img-right">
+                    <img src="images/dashboards/Dashboard-Zen/Dashboard-Zen.png" alt="Dashboard Zen">
+                </div>
+            </div>
+        </section>
+
+        <div class="blog-cta-container">
+            <a href="pages/blog.html" class="btn-blog">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
+                </svg>
+                <span data-i18n="blog.btn">Blog</span>
+            </a>
         </div>
 
-        <!-- Heading -->
-        <h1>
-            Beautiful dashboards<br>
-            <span>for Obsidian</span>
-            <img src="images/logo.png" alt="" class="floating-img">
-            <img src="images/element1.png" alt="" class="floating-img-2">
-            <img src="images/element2.png" alt="" class="floating-img-3">
-            <img src="images/element3.png" alt="" class="floating-img-4">
-            <img src="images/element4.png" alt="" class="floating-img-5">
-            <img src="images/element5.png" alt="" class="floating-img-6">
-        </h1>
+        <section class="blog-section-home" id="blog-section">
+            <h2 data-i18n="blog.latestPosts">Latest Posts</h2>
+            <div class="coming-soon-box">
+                <span class="coming-soon-tag" data-i18n="blog.comingSoon">Coming Soon</span>
+                <p data-i18n="blog.stayTuned">New posts are on the way. Stay tuned!</p>
+            </div>
+        </section>
 
-        <!-- Description -->
-        <p>
-            A collection of beautiful and functional dashboards for your Obsidian vault.
-            Copy, paste, and enjoy. No complex setup required.
-        </p>
+        <section class="dashboards-section" id="dashboards">
+            <h2 data-i18n="dashboards.title">Dashboards</h2>
+            <div class="dashboards-grid">
+                <article class="dashboard-card" data-dashboard="brutalist">
+                    <div class="dashboard-card-img">
+                        <img src="images/dashboards/Dashboard-Brutalist/Dashboard-Brutalist.png" alt="Dashboard Brutalist">
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 data-i18n="dashboards.brutalist">Brutalist</h3>
+                        <p class="dashboard-preview" data-i18n="dashboards.brutalist.preview">Bold and modern design with strong typography.</p>
+                        <span class="view-more" data-i18n="dashboards.viewMore">View details</span>
+                    </div>
+                </article>
 
-        <!-- Features -->
-        <div class="features">
-            <span>Plug & Play</span>
-            <span>Dataview</span>
-            <span>Minimal</span>
-            <span>Free</span>
-        </div>
+                <article class="dashboard-card" data-dashboard="komoribe">
+                    <div class="dashboard-card-img">
+                        <img src="images/dashboards/komoribe/komoribe.png" alt="Dashboard Komoribe">
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 data-i18n="dashboards.komoribe">Komoribe</h3>
+                        <p class="dashboard-preview" data-i18n="dashboards.komoribe.preview">Elegant and functional with clean aesthetics.</p>
+                        <span class="view-more" data-i18n="dashboards.viewMore">View details</span>
+                    </div>
+                </article>
 
-        <!-- Buttons -->
-        <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="btn">
-            <svg viewBox="0 0 24 24">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-            </svg>
-            View Repository
-        </a>
+                <article class="dashboard-card" data-dashboard="zen">
+                    <div class="dashboard-card-img">
+                        <img src="images/dashboards/Dashboard-Zen/Dashboard-Zen.png" alt="Dashboard Zen">
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 data-i18n="dashboards.zen">Zen</h3>
+                        <p class="dashboard-preview" data-i18n="dashboards.zen.preview">Peaceful minimalism focused on simplicity.</p>
+                        <span class="view-more" data-i18n="dashboards.viewMore">View details</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="star-btn">
-            <svg viewBox="0 0 24 24" width="18" height="18">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
-            </svg>
-            <span id="stars">Star</span>
-        </a>
-
-        <!-- Footer -->
         <footer>
-            <p>Made with care for the Obsidian community</p>
+            <p data-i18n="footer.made">Made with care for the Obsidian community</p>
             <p>&copy; 2026 <a href="https://github.com/InlitX">InlitX</a></p>
         </footer>
     </main>
 
-    <!-- GitHub Stars API -->
-    <script>
-        fetch('https://api.github.com/repos/InlitX/Obsidian-Dashboard-Gallery')
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById('stars').textContent = data.stargazers_count + ' Stars';
-            })
-            .catch(() => {
-                document.getElementById('stars').textContent = 'Star';
-            });
-    </script>
+    <div class="modal-overlay" id="modalOverlay"></div>
+    
+    <div class="modal" id="dashboardModal">
+        <button class="modal-close" id="modalClose">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+        </button>
+        <div class="modal-content">
+            <div class="modal-gallery">
+                <button class="modal-nav modal-prev" id="modalPrev">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="modal-main-img" id="modalMainImgContainer">
+                    <img src="" alt="" id="modalMainImg">
+                </div>
+                <button class="modal-nav modal-next" id="modalNext">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-thumbnails" id="modalThumbnails"></div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p class="modal-desc" id="modalDesc"></p>
+                <div class="modal-specs">
+                    <h4 data-i18n="modal.features">Features</h4>
+                    <table class="specs-table" id="modalSpecs"></table>
+                    <h4 data-i18n="modal.plugins">Required plugins</h4>
+                    <div class="plugin-tags" id="modalPlugins"></div>
+                    <div id="modalApiContainer" style="display:none;">
+                        <h4 data-i18n="modal.apiRequired">Required API</h4>
+                        <div class="plugin-tags" id="modalApi"></div>
+                    </div>
+                </div>
+                <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="btn-download" id="modalDownload">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                    </svg>
+                    <span data-i18n="dashboards.download">Download</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <svg viewBox="0 0 24 24" width="30" height="30">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" fill="none" stroke-width="2"/>
+            </svg>
+        </button>
+        <div class="lightbox-content" id="lightboxContent">
+            <img src="" alt="" id="lightboxImg">
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" fill="none" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="assets/js/i18n-config.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
