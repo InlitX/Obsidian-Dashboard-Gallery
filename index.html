@@ -1,3 +1,6 @@
+---
+permalink: /index.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,7 @@
     <meta property="og:title" content="Obsidian Dashboard Gallery">
     <meta property="og:description" content="Beautiful, free dashboards for your Obsidian vault. Copy, paste, enjoy.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://obsidian-dashboard-gallery.vercel.app">
+    <meta property="og:url" content="https://obsidian.inlitx.xyz">
     <meta property="og:image" content="https://raw.githubusercontent.com/InlitX/Obsidian-Dashboard-Gallery/main/images/dashboards/Dashboard-Brutalist.png">
     <meta property="og:locale" content="en_US">
     
@@ -21,9 +24,10 @@
     <meta name="twitter:description" content="Beautiful, free dashboards for your Obsidian vault.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/InlitX/Obsidian-Dashboard-Gallery/main/images/dashboards/Dashboard-Brutalist.png">
     
-    <link rel="canonical" href="https://obsidian-dashboard-gallery.vercel.app">
+    <link rel="canonical" href="https://obsidian.inlitx.xyz">
     <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
 </head>
 <body>
     <div class="bg"></div>
@@ -98,21 +102,21 @@
         </div>
 
         <section class="hero-gallery">
-            <div class="hero-gallery-3d">
-                <div class="hero-img hero-img-left">
+            <div class="hero-images">
+                <div class="hero-img-left">
                     <img src="images/dashboards/Dashboard-Brutalist/Dashboard-Brutalist.png" alt="Dashboard Brutalist">
                 </div>
-                <div class="hero-img hero-img-center">
+                <div class="hero-img-center">
                     <img src="images/dashboards/komoribe/komoribe.png" alt="Dashboard Komoribe">
                 </div>
-                <div class="hero-img hero-img-right">
+                <div class="hero-img-right">
                     <img src="images/dashboards/Dashboard-Zen/Dashboard-Zen.png" alt="Dashboard Zen">
                 </div>
             </div>
         </section>
 
         <div class="blog-cta-container">
-            <a href="pages/blog.html" class="btn-blog">
+            <a href="/blog/" class="btn-blog">
                 <svg viewBox="0 0 24 24" width="20" height="20">
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
                 </svg>
@@ -122,9 +126,43 @@
 
         <section class="blog-section-home" id="blog-section">
             <h2 data-i18n="blog.latestPosts">Latest Posts</h2>
-            <div class="coming-soon-box">
-                <span class="coming-soon-tag" data-i18n="blog.comingSoon">Coming Soon</span>
-                <p data-i18n="blog.stayTuned">New posts are on the way. Stay tuned!</p>
+            <div class="blog-grid" id="blogGrid">
+                {% if collections.posts.length > 0 %}
+                    {% for post in collections.posts | limit(3) %}
+                    <a href="{{ post.url }}" class="blog-card">
+                        {% if post.data.cover %}
+                        <div class="blog-card-img">
+                            <img src="{{ post.data.cover }}" alt="{{ post.data.title }}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                        </div>
+                        {% endif %}
+                        <div class="blog-card-body">
+                            <div class="blog-date">{{ post.data.date | blogDate }}</div>
+                            <h3 class="multilang-title"
+                                data-lang-en="{{ post.data.title }}"
+                                data-lang-es="{{ post.data.title_es if post.data.title_es else post.data.title }}"
+                                data-lang-fr="{{ post.data.title_fr if post.data.title_fr else post.data.title }}"
+                                data-lang-de="{{ post.data.title_de if post.data.title_de else post.data.title }}"
+                                data-lang-it="{{ post.data.title_it if post.data.title_it else post.data.title }}"
+                                data-lang-pt="{{ post.data.title_pt if post.data.title_pt else post.data.title }}"
+                                data-lang-zh="{{ post.data.title_zh if post.data.title_zh else post.data.title }}"
+                                data-lang-ja="{{ post.data.title_ja if post.data.title_ja else post.data.title }}"
+                            >{{ post.data.title }}</h3>
+                            <p>{{ post.data.excerpt }}</p>
+                            <span class="blog-link" data-i18n="blog.readMore">Read more</span>
+                        </div>
+                    </a>
+                    {% endfor %}
+                {% else %}
+                <div class="coming-soon-card">
+                    <div class="coming-soon-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3>En construcción</h3>
+                    <p>Estamos preparando nuevo contenido para ti</p>
+                </div>
+                {% endif %}
             </div>
         </section>
 
@@ -245,5 +283,6 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="assets/js/i18n-config.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog-lang.js"></script>
 </body>
 </html>

@@ -1,0 +1,175 @@
+e---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Obsidian Dashboard Gallery</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 200px);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .error-code {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14rem;
+            font-weight: 700;
+            letter-spacing: -0.06em;
+            line-height: 1;
+            color: var(--text);
+            margin: 0;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .error-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            animation: fadeInUp 0.8s ease-out 0.15s backwards;
+        }
+        .error-desc {
+            font-size: 1rem;
+            color: var(--text-dim);
+            max-width: 360px;
+            margin: 0 0 2.5rem;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+        }
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.8s ease-out 0.45s backwards;
+        }
+        .error-btn:hover {
+            background: var(--surface-hover);
+            border-color: var(--text-dim);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .error-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            transition: transform 0.3s ease;
+        }
+        .error-btn:hover svg {
+            transform: translateX(-3px);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 7rem;
+            }
+            .error-title {
+                font-size: 1.1rem;
+            }
+            .error-desc {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="/" class="logo-link">
+                <img src="/images/logo.png" alt="Logo" class="header-logo">
+                <span class="logo-text">Obsidian Gallery</span>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                <span data-i18n="header.repo">Repo</span>
+            </a>
+            <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn star-btn-header">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+                </svg>
+                <span id="stars-header">Star</span>
+            </a>
+            <div class="lang-dropdown">
+                <button class="lang-trigger header-btn" id="langTrigger">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                        <path d="M2 12h20M12 2c2.5 2.5 4 6 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6-4-10s1.5-7.5 4-10z" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                    </svg>
+                    <span id="currentLangLabel">EN</span>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                    <button class="lang-option" data-lang="fr">Français</button>
+                    <button class="lang-option" data-lang="de">Deutsch</button>
+                    <button class="lang-option" data-lang="it">Italiano</button>
+                    <button class="lang-option" data-lang="pt">Português</button>
+                    <button class="lang-option" data-lang="zh">中文</button>
+                    <button class="lang-option" data-lang="ja">日本語</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="error-page">
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title" data-i18n="404.title">Page Not Found</h2>
+            <p class="error-desc" data-i18n="404.desc">The page you're looking for doesn't exist or has been moved.</p>
+            <a href="/" class="error-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" fill="none" stroke-width="2"/>
+                </svg>
+                <span data-i18n="404.btn">Back to Home</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer.made">Made with love for the Obsidian community</p>
+        <p>&copy; 2026 <a href="https://github.com/InlitX">InlitX</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="/assets/js/i18n-config.js"></script>
+</body>
+</html>
