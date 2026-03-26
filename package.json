@@ -1,0 +1,13 @@
+{
+  "name": "obsidian-dashboard-gallery",
+  "version": "1.0.0",
+  "description": "Obsidian Dashboard Gallery with Eleventy blog",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
