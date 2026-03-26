@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} – Obsidian Dashboard Gallery</title>
+    <meta name="description" content="{{ excerpt }}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ title }} – Obsidian Dashboard Gallery">
+    <meta property="og:description" content="{{ excerpt }}">
+    <meta property="og:type" content="article">
+    {% if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
+    <link rel="canonical" href="https://obsidian.inlitx.xyz{{ page.url }}">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="/" class="logo-link">
+                <img src="/images/logo.png" alt="Logo" class="header-logo">
+                <span class="logo-text">Obsidian Gallery</span>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn">
+                <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="header.repo">Repo</span>
+            </a>
+            <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn star-btn-header">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+                <span id="stars-header">Star</span>
+            </a>
+            <div class="lang-dropdown">
+                <button class="lang-trigger header-btn" id="langTrigger">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                        <path d="M2 12h20M12 2c2.5 2.5 4 6 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6-4-10s1.5-7.5 4-10z" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                    </svg>
+                    <span id="currentLangLabel">EN</span>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                    <button class="lang-option" data-lang="fr">Français</button>
+                    <button class="lang-option" data-lang="de">Deutsch</button>
+                    <button class="lang-option" data-lang="it">Italiano</button>
+                    <button class="lang-option" data-lang="pt">Português</button>
+                    <button class="lang-option" data-lang="zh">中文</button>
+                    <button class="lang-option" data-lang="ja">日本語</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-post-page">
+        <a href="/blog/" class="back-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" fill="none" stroke-width="2"/>
+            </svg>
+            <span data-i18n="blog.back">Back to Blog</span>
+        </a>
+
+        <article class="blog-post-full">
+            {% if cover %}
+            <div class="post-cover">
+                <img src="{{ cover }}" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
+            </div>
+            {% endif %}
+
+            <header class="post-header">
+                <div class="post-meta">
+                    <time>{{ date | blogDate }}</time>
+                    <span class="sep">·</span>
+                    <span>{{ readTime }} <span data-i18n="blog.readTime">min read</span></span>
+                </div>
+                <h1 class="multilang-title"
+                    data-lang-en="{{ title }}"
+                    data-lang-es="{{ title_es if title_es else title }}"
+                    data-lang-fr="{{ title_fr if title_fr else title }}"
+                    data-lang-de="{{ title_de if title_de else title }}"
+                    data-lang-it="{{ title_it if title_it else title }}"
+                    data-lang-pt="{{ title_pt if title_pt else title }}"
+                    data-lang-zh="{{ title_zh if title_zh else title }}"
+                    data-lang-ja="{{ title_ja if title_ja else title }}"
+                >{{ title }}</h1>
+                <p class="post-excerpt">{{ excerpt }}</p>
+            </header>
+
+            <div class="post-body">
+                {{ content | safe }}
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p data-i18n="footer.made">Made with love for the Obsidian community</p>
+        <p>&copy; 2026 <a href="https://github.com/InlitX">InlitX</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="/assets/js/i18n-config.js"></script>
+    <script src="/assets/js/blog-lang.js"></script>
+</body>
+</html>
