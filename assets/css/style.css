@@ -23,7 +23,7 @@ html {
 
 body {
     font-family: 'DM Sans', -apple-system, sans-serif;
-    background: var(--bg);
+    background: var(--bg) !important;
     color: var(--text);
     min-height: 100vh;
     line-height: 1.6;
