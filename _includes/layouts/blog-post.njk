@@ -31,7 +31,7 @@
                 <span data-i18n="header.repo">Repo</span>
             </a>
             <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn star-btn-header">
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                 <span id="stars-header">Star</span>
             </a>
             <div class="lang-dropdown">
@@ -75,7 +75,7 @@
                 <div class="post-meta">
                     <time>{{ date | blogDate }}</time>
                     <span class="sep">·</span>
-                    <span>{{ readTime }} <span data-i18n="blog.readTime">min read</span></span>
+                    <span>{% if readTime %}{{ readTime }}{% else %}{{ content | readTime }}{% endif %} <span data-i18n="blog.readTime">min read</span></span>
                 </div>
                 <h1 class="multilang-title"
                     data-lang-en="{{ title }}"
@@ -93,6 +93,17 @@
             <div class="post-body">
                 {{ content | safe }}
             </div>
+
+            <div class="support-section">
+                <p class="support-text" data-i18n="blog.support">⭐ Support this project in any way you can!</p>
+                <div class="post-footer-actions">
+                    <div class="kofi-widget-container">
+                        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                        <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000000', 'J3J41W702I');kofiwidget2.draw();</script>
+                    </div>
+                    <a class="gh-btn v-default md" data-gh="InlitX/Obsidian-Dashboard-Gallery" href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank"></a>
+                </div>
+            </div>
         </article>
     </main>
 
@@ -101,9 +112,51 @@
         <p>&copy; 2026 <a href="https://github.com/InlitX">InlitX</a></p>
     </footer>
 
+    <div class="image-zoom-overlay" id="imageZoomOverlay">
+        <button class="image-zoom-close" aria-label="Close">&times;</button>
+        <img src="" alt="Zoomed image" id="zoomImage">
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="/assets/js/i18n-config.js"></script>
     <script src="/assets/js/blog-lang.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('imageZoomOverlay');
+            const zoomImg = document.getElementById('zoomImage');
+            const closeBtn = document.querySelector('.image-zoom-close');
+            const postBody = document.querySelector('.post-body');
+            
+            if (postBody) {
+                postBody.querySelectorAll('img').forEach(img => {
+                    img.style.cursor = 'zoom-in';
+                    img.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        zoomImg.src = this.src;
+                        overlay.classList.add('active');
+                    });
+                });
+            }
+            
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+            
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                overlay.classList.remove('active');
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

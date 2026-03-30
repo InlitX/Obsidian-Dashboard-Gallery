@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
 }
 
 .bg {
@@ -138,15 +140,16 @@ body {
 }
 
 .star-btn-header svg {
-    fill: currentColor;
-    stroke: none;
-    width: 13px;
-    height: 13px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    width: 14px;
+    height: 14px;
     display: block;
 }
 
 .star-btn-header:hover {
-    color: #fbbf24;
+    color: #fff;
 }
 
 .theme-toggle {
@@ -168,7 +171,10 @@ body {
 .lang-trigger {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+    padding: 8px 10px;
+    min-width: 50px;
 }
 
 .lang-menu {

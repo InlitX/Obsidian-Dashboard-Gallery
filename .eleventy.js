@@ -31,6 +31,32 @@ module.exports = function(eleventyConfig) {
     return (arr || []).slice(0, n);
   });
 
+  eleventyConfig.addFilter("readTime", function(content) {
+    if (!content) return 1;
+    const wordsPerMinute = 200;
+    const text = content.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+    const wordCount = text.split(' ').length;
+    return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+  });
+
+  eleventyConfig.addFilter("striptags", function(content) {
+    if (!content) return '';
+    return content.replace(/<[^>]*>/g, '');
+  });
+
+  eleventyConfig.addFilter("truncate", function(content, length) {
+    if (!content) return '';
+    if (content.length <= length) return content;
+    return content.substring(0, length).trim() + '...';
+  });
+
+  eleventyConfig.addFilter("excerpt", function(content) {
+    if (!content) return '';
+    const text = content.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+    if (text.length <= 80) return text;
+    return text.substring(0, 80).trim() + '...';
+  });
+
   // ── Markdown ────────────────────────────────────────────────────────────
   // Use the markdown-it bundled inside Eleventy (v13, CJS compatible)
   const markdownIt = require("./node_modules/@11ty/eleventy/node_modules/markdown-it");

@@ -13,6 +13,7 @@ const translations = {
             "blog.stayTuned": "I'm writing new content for this space. It will be ready in a few days.",
             "blog.langOnlyLabel": "Articles in English only — why?",
             "blog.langOnlyTooltip": "Posts are written in English only. Titles are translated so you know what each article is about, but translating full articles is a lot of work. Sorry!",
+            "blog.support": "⭐ Support this project in any way you can!",
             "hero.tag": "Coming Soon",
             "hero.title": "Dashboards",
             "hero.titleAccent": "for Obsidian",
@@ -81,6 +82,7 @@ const translations = {
             "blog.stayTuned": "Estoy redactando nuevo contenido para este espacio. Estará listo en unos días.",
             "blog.langOnlyLabel": "Artículos solo en inglés — ¿por qué?",
             "blog.langOnlyTooltip": "Los artículos están escritos solo en inglés. Los títulos están traducidos para que sepas de qué trata cada artículo, pero traducir artículos completos es mucho trabajo. ¡Lo sentimos!",
+            "blog.support": "⭐ ¡Apoya este proyecto de cualquier manera que puedas!",
             "hero.tag": "Próximamente",
             "hero.title": "Dashboards",
             "hero.titleAccent": "para Obsidian",
@@ -149,6 +151,7 @@ const translations = {
             "blog.stayTuned": "Nous préparons du nouveau contenu pour vous.",
             "blog.langOnlyLabel": "Articles en anglais uniquement — pourquoi ?",
             "blog.langOnlyTooltip": "Les articles sont rédigés en anglais uniquement. Les titres sont traduits pour que vous sachiez de quoi parle chaque article, mais traduire des articles complets demande beaucoup de travail. Désolé !",
+            "blog.support": "⭐ Soutenez ce projet comme vous le pouvez !",
             "hero.tag": "Bientôt",
             "hero.title": "Dashboards",
             "hero.titleAccent": "pour Obsidian",
@@ -217,6 +220,7 @@ const translations = {
             "blog.stayTuned": "Wir bereiten neue Inhalte für dich vor.",
             "blog.langOnlyLabel": "Artikel nur auf Englisch — warum?",
             "blog.langOnlyTooltip": "Beiträge werden nur auf Englisch verfasst. Titel sind übersetzt, damit du weißt, worum es in jedem Artikel geht, aber ganze Artikel zu übersetzen ist sehr aufwendig. Entschuldigung!",
+            "blog.support": "⭐ Unterstütze dieses Projekt auf jede Weise!",
             "hero.tag": "Bald verfügbar",
             "hero.title": "Dashboards",
             "hero.titleAccent": "für Obsidian",
@@ -285,6 +289,7 @@ const translations = {
             "blog.stayTuned": "Stiamo preparando nuovo contenuto per te.",
             "blog.langOnlyLabel": "Articoli solo in inglese — perché?",
             "blog.langOnlyTooltip": "Gli articoli sono scritti solo in inglese. I titoli sono tradotti così sai di cosa parla ogni articolo, ma tradurre articoli interi richiede molto lavoro. Ci dispiace!",
+            "blog.support": "⭐ Supporta questo progetto in qualsiasi modo possibile!",
             "hero.tag": "Prossimamente",
             "hero.title": "Dashboard",
             "hero.titleAccent": "per Obsidian",
@@ -353,6 +358,7 @@ const translations = {
             "blog.stayTuned": "Estamos a preparar novo conteúdo para ti.",
             "blog.langOnlyLabel": "Artigos apenas em inglês — porquê?",
             "blog.langOnlyTooltip": "Os artigos são escritos apenas em inglês. Os títulos são traduzidos para que saibas do que trata cada artigo, mas traduzir artigos completos dá muito trabalho. Desculpa!",
+            "blog.support": "⭐ Apoie este projeto de qualquer maneira que puder!",
             "hero.tag": "Em breve",
             "hero.title": "Dashboards",
             "hero.titleAccent": "para Obsidian",
@@ -421,6 +427,7 @@ const translations = {
             "blog.stayTuned": "我们正在为您准备新内容。",
             "blog.langOnlyLabel": "文章仅以英语撰写 — 为什么？",
             "blog.langOnlyTooltip": "文章仅以英语撰写。标题已翻译，让你了解每篇文章的主题，但翻译完整文章需要大量工作。抱歉！",
+            "blog.support": "⭐ 请以任何方式支持这个项目！",
             "hero.tag": "即将推出",
             "hero.title": "仪表盘",
             "hero.titleAccent": "为 Obsidian 打造",
@@ -488,7 +495,8 @@ const translations = {
             "blog.comingSoon": "準備中",
             "blog.stayTuned": "新しいコンテンツを準備中です。",
             "blog.langOnlyLabel": "英語のみの記事 — なぜ？",
-            "blog.langOnlyTooltip": "記事は英語のみで執筆されています。タイトルは翻訳されているので各記事の内容がわかりますが、記事全体を翻訳するのは大変な作業です。ご了承ください！",
+            "blog.langOnlyTooltip": "記事は英語のみで執筆されています。タイトルは翻訳されているので各記事の内容がわかりますが、記事全体を翻訳するのは急な作業です。ご了承ください！",
+            "blog.support": "⭐ どんな形でもこのプロジェクトをサポートしてください！",
             "hero.tag": "近日公開",
             "hero.title": "ダッシュボード",
             "hero.titleAccent": "Obsidian のために",
@@ -611,13 +619,93 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     fetch('https://api.github.com/repos/InlitX/Obsidian-Dashboard-Gallery')
         .then(res => res.json())
         .then(data => {
             if (data.stargazers_count) {
                 const starEl = document.getElementById('stars-header');
-                if (starEl) starEl.textContent = `Star ${data.stargazers_count}`;
+                const targetStars = data.stargazers_count;
+                let currentStars = 0;
+                const duration = 1500;
+                const startTime = performance.now();
+                
+                function animateStars(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    currentStars = Math.floor(targetStars * eased);
+                    
+                    if (starEl) starEl.textContent = `Star ${currentStars}`;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animateStars);
+                    }
+                }
+                
+                requestAnimationFrame(animateStars);
             }
         })
         .catch(() => {});
+
+    const GH_ICON_SVG = `
+      <svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5.1 18 5.4 18 5.4c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/>
+      </svg>`;
+
+    function buildButtonInner(btn) {
+      btn.innerHTML = `
+        <span class="gh-left">${GH_ICON_SVG}<span>Star</span></span>
+        <span class="gh-divider"></span>
+        <span class="gh-count"><span class="slide-num">0</span><span class="star-suffix"> ⭐</span></span>
+      `;
+    }
+
+    function formatStars(n) {
+      if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+      return String(n);
+    }
+
+    function animateCountGlow(el, target, duration) {
+      const start = 0;
+      const startTime = performance.now();
+      
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(start + (target - start) * eased);
+        el.textContent = formatStars(current);
+        
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.style.textShadow = '0 0 20px #ffd700, 0 0 40px #ffaa00';
+          setTimeout(() => {
+            el.style.textShadow = 'none';
+          }, 500);
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    async function initGhBtn(btn) {
+      buildButtonInner(btn);
+      const [user, repo] = btn.dataset.gh.split('/');
+      const numEl = btn.querySelector('.slide-num');
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${user}/${repo}`);
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        const stars = data.stargazers_count || 0;
+        animateCountGlow(numEl, stars, 2000);
+      } catch (e) {
+        numEl.textContent = '—';
+      }
+    }
+
+    document.querySelectorAll('.gh-btn[data-gh]').forEach(initGhBtn);
 });
