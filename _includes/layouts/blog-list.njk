@@ -30,7 +30,7 @@
                 <span data-i18n="header.repo">Repo</span>
             </a>
             <a href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank" class="header-btn star-btn-header">
-                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                 <span id="stars-header">Star</span>
             </a>
             <div class="lang-dropdown">
@@ -86,7 +86,7 @@
                         <div class="blog-list-card-meta">
                             <time>{{ post.data.date | blogDate }}</time>
                             <span class="sep">·</span>
-                            <span>{{ post.data.readTime }} <span data-i18n="blog.readTime">min read</span></span>
+                            <span>{% if post.data.readTime %}{{ post.data.readTime }}{% else %}{{ post.templateContent | readTime }}{% endif %} <span data-i18n="blog.readTime">min read</span></span>
                         </div>
                         <h2 class="multilang-title"
                             data-lang-en="{{ post.data.title }}"
@@ -98,7 +98,6 @@
                             data-lang-zh="{{ post.data.title_zh if post.data.title_zh else post.data.title }}"
                             data-lang-ja="{{ post.data.title_ja if post.data.title_ja else post.data.title }}"
                         >{{ post.data.title }}</h2>
-                        <p class="blog-list-card-excerpt">{{ post.data.excerpt }}</p>
                         <span class="blog-link" data-i18n="blog.readMore">Read more →</span>
                     </div>
                 </a>
@@ -118,7 +117,16 @@
     </main>
 
     <footer>
-        <div style="margin-bottom: 25px;"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000000', 'J3J41W702I');kofiwidget2.draw();</script></div>
+        <div class="support-section" style="border-top: none; padding-top: 0; margin-top: 0;">
+            <p class="support-text" data-i18n="blog.support">⭐ Support this project in any way you can!</p>
+            <div class="post-footer-actions">
+                <div class="kofi-widget-container">
+                    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000000', 'J3J41W702I');kofiwidget2.draw();</script>
+                </div>
+                <a class="gh-btn v-default md" data-gh="InlitX/Obsidian-Dashboard-Gallery" href="https://github.com/InlitX/Obsidian-Dashboard-Gallery" target="_blank"></a>
+            </div>
+        </div>
         <p data-i18n="footer.made">Made with love for the Obsidian community</p>
         <p>&copy; 2026 <a href="https://github.com/InlitX">InlitX</a></p>
     </footer>
