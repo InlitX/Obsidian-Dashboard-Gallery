@@ -1,8 +1,11 @@
-# Obsidian Dashboard Gallery
+# Obsidian Dashboard Gallery — Web
+
+Sitio estático (Eleventy) que muestra la galería de dashboards para Obsidian. Multiidioma (8 lenguas) con i18next.
 
 ## Arrancar
 
 ```bash
+npm install
 npm run serve
 ```
 
@@ -14,39 +17,39 @@ Abre http://localhost:8080
 npm run build
 ```
 
-Los archivos se generan en `_site/`.
+Genera el sitio en `_site/` (ignorado por git).
 
-## Añadir posts
+## Estructura
 
-Crea una carpeta en `blog/posts/tu-post/` con un `index.md`. El frontmatter mínimo:
-
-```yaml
----
-title: "Título"
-date: 2026-03-25
-tags: [posts]
----
+```
+index.html              Home: hero + galería de dashboards + modal
+404.njk                 Página de error
+_includes/layouts/      Plantillas del blog (list / post)
+assets/
+  css/                  style.css (web) · blog.css (blog)
+  js/
+    main.js             Datos de cada dashboard + lógica del modal/galería
+    i18n-config.js      Traducciones (8 idiomas) + cambio de idioma
+    blog-lang.js        Idioma en el blog
+blog/                   Blog (índice y posts)
+images/
+  dashboards/<Nombre>/  Capturas y vídeo de cada dashboard
+  elements/             Imágenes decorativas del hero
+  logo.png
+.eleventy.js            Config de Eleventy
 ```
 
-Las imágenes del post van en la misma carpeta. El resto se genera solo.
+## Añadir un dashboard
+
+Son 3 pasos, todos enlazados por el `id` (ej. `atlas`):
+
+1. **Imágenes** → `images/dashboards/<Nombre>/` (`.png` y opcional `.mp4`).
+2. **`index.html`** → una `<article class="dashboard-card" data-dashboard="id">` en `.dashboards-grid`.
+3. **`assets/js/main.js`** → entrada en `dashboardData` con `images`, `videos`, `specs`, `plugins`, `url`.
+4. **`assets/js/i18n-config.js`** → en los **8 idiomas**: `dashboards.<id>`, `dashboards.<id>.preview` y cada `modal.specs.*` que uses en `specs`.
+
+> Toda cadena de texto pasa por i18next: añádela en los 8 idiomas o caerá al inglés por defecto.
 
 ---
 
-## Roadmap: Ideas futuras
-
-### 1. 🌐 Sistema de búsqueda en el blog
-Añadir un buscador que permita filtrar posts por título o tags. Implementación simple con JS (Fuse.js o similar).
-
-### 2. 📱 PWA (Progressive Web App)
-Hacer que la web sea instalable como app en móvil. Solo requiere un manifest.json y service worker básico.
-
-### 3. 📊 Sección de estadísticas
-Mostrar en la home el número de dashboards, posts publicados, estrellas de GitHub, etc. Se puede obtener dinámicamente desde la API de GitHub.
-
----
-
-## Otras ideas
-
-- **Sitemap y RSS** - Generar sitemap.xml y feed RSS para SEO
-- **SEO avanzado** - Meta tags, Open Graph, Twitter Cards
-- **Tester de dashboards** - Demo en vivo de los dashboards en la web
+Made with ❤️ for the Obsidian community
