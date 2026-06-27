@@ -1,4 +1,18 @@
 const dashboardData = {
+    atlas: {
+        titleKey: 'dashboards.atlas',
+        images: [
+            'images/dashboards/Atlas/atlas.png',
+            'images/dashboards/Atlas/atlas-2.png'
+        ],
+        videos: [
+            'images/dashboards/Atlas/atlas.mp4'
+        ],
+        descKey: 'dashboards.atlas.preview',
+        specs: ['greeting', 'tagFilter', 'recentNotes', 'bookmarks', 'onThisDay', 'quickCapture', 'heatmap', 'scratchpad', 'pomodoro', 'miniCalendar', 'accentPicker'],
+        plugins: ['Dataview'],
+        url: 'https://github.com/InlitX/Obsidian-Dashboard-Gallery'
+    },
     brutalist: {
         titleKey: 'dashboards.brutalist',
         images: [
