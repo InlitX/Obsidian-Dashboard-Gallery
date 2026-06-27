@@ -138,7 +138,7 @@ Un dashboard de inicio tranquilo y sereno pensado para sentirte en casa al abrir
 <details>
 <summary>🎥 Haz clic para ver la vista previa en video</summary>
 
-![Dashboard-Atlas](../images/Atlas/atlas.mp4)
+[![Dashboard-Atlas](images/Atlas/atlas.mp4)](https://github.com/user-attachments/assets/c1c1d6ed-7bc2-46d9-be11-930915bf44b7)
 
 </details>
 
