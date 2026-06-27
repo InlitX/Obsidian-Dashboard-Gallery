@@ -142,7 +142,7 @@
 <details>
 <summary>🎥 点击查看视频预览</summary>
 
-![Dashboard-Atlas](../images/Atlas/atlas.mp4)
+[![Dashboard-Atlas](images/Atlas/atlas.mp4)](https://github.com/user-attachments/assets/c1c1d6ed-7bc2-46d9-be11-930915bf44b7)
 
 </details>
 
