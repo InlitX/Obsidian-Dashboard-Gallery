@@ -142,7 +142,10 @@ A calm, serene home dashboard designed to make you feel at home every time you o
 <details>
 <summary>🎥 Click to see video preview</summary>
 
-![Dashboard-Atlas](images/Atlas/atlas.mp4)
+[![Dashboard-Atlas](images/Atlas/atlas.mp4)](https://github.com/user-attachments/assets/c1c1d6ed-7bc2-46d9-be11-930915bf44b7)
+
+
+
 
 </details>
 
