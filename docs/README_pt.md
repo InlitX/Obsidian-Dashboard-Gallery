@@ -37,6 +37,7 @@ Este repositório é dedicado a compartilhar dashboards do Obsidian bonitos e fu
 - [1. 💻 Dashboard Início Brutalista](#1--brutalist-home-dashboard)
 - [2. 🧘 Dashboard Início Zen](#2--zen-home-dashboard)
 - [3. 🌿 Dashboard Início Komorebi](#3--komorebi-home-dashboard)
+- [4. 🧭 Dashboard Início Atlas](#4--atlas-home-dashboard)
 
 ---
 
@@ -114,6 +115,30 @@ Um dashboard inspirado na natureza com uma estética suave e orgânica. Layout l
 <summary>🎥 Clique para ver o vídeo de demonstração</summary>
 
 [![Dashboard-Komorebi](../images/Komorobi/komoribe.mp4)](https://github.com/user-attachments/assets/5463b91c-fffb-4f25-a5de-2580f7dbd925)
+
+</details>
+
+---
+
+## 4. 🧭 Dashboard Início Atlas
+
+<div align="center">
+
+![Dashboard-Atlas](../images/Atlas/atlas.png)
+
+<p><strong>Autor:</strong> <a href="https://github.com/Inlitx">Inlitx</a></p>
+
+</div>
+
+Um dashboard inicial calmo e sereno, pensado para você se sentir em casa toda vez que abrir seu cofre. Inclui saudação conforme a hora do dia, filtro por tags, notas recentes, favoritos, seção "Neste dia", notas abertas recentemente, captura rápida para a inbox e cores de destaque personalizáveis. Limpo, leve e adaptável ao seu tema do Obsidian.
+
+**Plugins necessários:**
+· Dataview (com JavaScript habilitado)
+
+<details>
+<summary>🎥 Clique para ver o vídeo de demonstração</summary>
+
+![Dashboard-Atlas](../images/Atlas/atlas.mp4)
 
 </details>
 

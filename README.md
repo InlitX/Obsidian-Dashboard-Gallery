@@ -41,6 +41,7 @@ This repository is dedicated to sharing beautiful and functional Obsidian dashbo
 - [1. 💻 Brutalist Home Dashboard](#1--brutalist-home-dashboard)
 - [2. 🧘 Zen Home Dashboard](#2--zen-home-dashboard)
 - [3. 🌿 Komorebi Home Dashboard](#3--komorebi-home-dashboard)
+- [4. 🧭 Atlas Home Dashboard](#4--atlas-home-dashboard)
 
 ---
 
@@ -118,6 +119,30 @@ A nature-inspired dashboard with a soft, organic aesthetic. Clean layout, calm c
 <summary>🎥 Click to see video preview</summary>
 
 [![Dashboard-Komorebi](images/Komorobi/komoribe.mp4)](https://github.com/user-attachments/assets/5463b91c-fffb-4f25-a5de-2580f7dbd925)
+
+</details>
+
+---
+
+## 4. 🧭 Atlas Home Dashboard
+
+<div align="center">
+
+![Dashboard-Atlas](images/Atlas/atlas.png)
+
+<p><strong>Author:</strong> <a href="https://github.com/Inlitx">Inlitx</a></p>
+
+</div>
+
+A calm, serene home dashboard designed to make you feel at home every time you open your vault. It features a time-of-day greeting, tag filtering, recent notes, bookmarks, an "On this day" section, recently opened notes, quick capture to your inbox, and customizable accent colors. Clean, lightweight, and adapts to your Obsidian theme.
+
+**Required plugins:**
+· Dataview (with JavaScript enabled)
+
+<details>
+<summary>🎥 Click to see video preview</summary>
+
+![Dashboard-Atlas](images/Atlas/atlas.mp4)
 
 </details>
 

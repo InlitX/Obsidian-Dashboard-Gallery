@@ -41,6 +41,7 @@
 - [1. 💻 Brutalist 主页仪表板](#1--brutalist-主页仪表板)
 - [2. 🧘 Zen 主页仪表板](#2--zen-主页仪表板)
 - [3. 🌿 Komorebi 主页仪表板](#3--komorebi-主页仪表板)
+- [4. 🧭 Atlas 主页仪表板](#4--atlas-主页仪表板)
 
 ---
 
@@ -118,6 +119,30 @@
 <summary>🎥 点击查看视频预览</summary>
 
 [![Dashboard-Komorebi](../images/Komorobi/komoribe.mp4)](https://github.com/user-attachments/assets/5463b91c-fffb-4f25-a5de-2580f7dbd925)
+
+</details>
+
+---
+
+## 4. 🧭 Atlas 主页仪表板
+
+<div align="center">
+
+![Dashboard-Atlas](../images/Atlas/atlas.png)
+
+<p><strong>作者：</strong> <a href="https://github.com/Inlitx">Inlitx</a></p>
+
+</div>
+
+一款宁静、平和的主页仪表板，旨在让您每次打开知识库时都倍感亲切。它具备按时段问候、标签筛选、最近笔记、书签、"历史上的今天"板块、最近打开的笔记、快速捕捉至收件箱以及可自定义的强调色等功能。简洁、轻量，并能自动适配您的 Obsidian 主题。
+
+**所需插件：**
+· Dataview（需启用 JavaScript 支持）
+
+<details>
+<summary>🎥 点击查看视频预览</summary>
+
+![Dashboard-Atlas](../images/Atlas/atlas.mp4)
 
 </details>
 
