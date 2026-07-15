@@ -463,6 +463,7 @@
 }
 
 /* Weather Big */
+.komo-weather-card { flex: 1; }
 .komo-weather-content {
   display: flex;
   flex-direction: column;
@@ -972,7 +973,7 @@
 /* ──────────────────────────────────────────────
    POMODORO TIMER
    ────────────────────────────────────────────── */
-.komo-pomodoro-card { min-height: 200px; }
+.komo-pomodoro-card { flex: 1; min-height: 200px; }
 
 .komo-pomodoro {
   display: flex;
