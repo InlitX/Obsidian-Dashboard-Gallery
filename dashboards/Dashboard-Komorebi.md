@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - dashboard-layout
+---
+
 ```dataviewjs
 // Dashboard-Komorebi
 // more dashboards → https://github.com/InlitX/Obsidian-Dashboard-Gallery

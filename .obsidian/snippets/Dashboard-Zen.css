@@ -23,6 +23,19 @@
     --zos-font-mono: 'JetBrains Mono', monospace;
 }
 
+/* FORCE THE NOTE CONTAINERS TO BE WIDE */
+.dashboard-layout .cm-sizer,
+.dashboard-layout .markdown-preview-sizer {
+    max-width: 1460px !important;
+    width: 100% !important;
+}
+
+/* Hides the properties section. */
+.dashboard-layout .metadata-container {
+    display: none !important;
+}
+
+
 /* Base Styles */
 .zos-dashboard {
     max-width: 1500px;
