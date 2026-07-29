@@ -27,6 +27,19 @@
     letter-spacing: -0.01em;
 }
 
+/* FORCE THE NOTE CONTAINERS TO BE WIDE */
+.dashboard-layout .cm-sizer,
+.dashboard-layout .markdown-preview-sizer {
+    max-width: 1460px !important;
+    width: 100% !important;
+}
+
+/* Hides the properties section. */
+.dashboard-layout .metadata-container {
+    display: none !important;
+}
+
+
 .atl * { box-sizing: border-box; }
 
 .atl-in { animation: atlIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) backwards; }

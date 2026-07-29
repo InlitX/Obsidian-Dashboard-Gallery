@@ -42,6 +42,18 @@
   --komo-shadow:  0 2px 20px rgba(0,0,0,0.45);
 }
 
+/* FORCE THE NOTE CONTAINERS TO BE WIDE */
+.dashboard-layout .cm-sizer,
+.dashboard-layout .markdown-preview-sizer {
+  max-width: 1460px !important;
+  width: 100% !important;
+}
+
+/* Hides the properties section. */
+.dashboard-layout .metadata-container {
+  display: none !important;
+}
+
 /* ──────────────────────────────────────────────
    OBSIDIAN READING VIEW RESET
    ────────────────────────────────────────────── */

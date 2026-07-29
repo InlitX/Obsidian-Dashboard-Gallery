@@ -1,4 +1,7 @@
-
+---
+cssclasses:
+  - dashboard-layout
+---
 
 ```dataviewjs
 // ============================================

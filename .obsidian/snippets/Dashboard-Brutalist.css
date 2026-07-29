@@ -6,6 +6,19 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&display=swap');
 
+/* FORCE THE NOTE CONTAINERS TO BE WIDE */
+.dashboard-layout .cm-sizer,
+.dashboard-layout .markdown-preview-sizer {
+    max-width: 1460px !important;
+    width: 100% !important;
+}
+
+/* Hides the properties section. */
+.dashboard-layout .metadata-container {
+    display: none !important;
+}
+
+
 /* --- MAIN CONTAINER --- */
 .home-final-dashboard {
     font-family: 'Space Grotesk', monospace;

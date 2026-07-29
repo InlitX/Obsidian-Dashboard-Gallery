@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - dashboard-layout
+---
 
 ```dataviewjs
 // Atlas — a calm home dashboard for your vault.
