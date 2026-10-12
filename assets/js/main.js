@@ -28,6 +28,18 @@ const dashboardData = {
         apiRequired: 'OpenWeatherMap',
         url: 'https://github.com/InlitX/Obsidian-Dashboard-Gallery'
     },
+    haven: {
+        titleKey: 'dashboards.haven',
+        images: [
+            'images/dashboards/Haven/haven.png',
+            'images/dashboards/Haven/haven-2.png'
+        ],
+        videos: [],
+        descKey: 'dashboards.haven.preview',
+        specs: ['coverPicker', 'pageIcon', 'notesGallery', 'taskViews', 'taskWriteBack', 'folderNav', 'clockWidget', 'dailyCheckin', 'toggles', 'lightDark'],
+        plugins: ['Dataview'],
+        url: 'https://github.com/InlitX/Obsidian-Dashboard-Gallery'
+    },
     komoribe: {
         titleKey: 'dashboards.komoribe',
         images: [
@@ -40,6 +52,18 @@ const dashboardData = {
         specs: ['customCards', 'miniCalendar', 'pomodoro', 'weeklyHabits', 'weather', 'musicPlayer', 'japaneseClock', 'quickActions'],
         plugins: ['Dataview', 'QuickAdd (optional)'],
         apiRequired: 'OpenWeatherMap',
+        url: 'https://github.com/InlitX/Obsidian-Dashboard-Gallery'
+    },
+    pixel: {
+        titleKey: 'dashboards.pixel',
+        images: [
+            'images/dashboards/Pixel/pixel.png',
+            'images/dashboards/Pixel/pixel-2.png'
+        ],
+        videos: [],
+        descKey: 'dashboards.pixel.preview',
+        specs: ['dynamicColor', 'shapeMorph', 'waveProgress', 'taskWriteBack', 'quickCapture', 'heatmap', 'mediaPicker', 'bookmarks', 'lightDark'],
+        plugins: ['Dataview'],
         url: 'https://github.com/InlitX/Obsidian-Dashboard-Gallery'
     },
     zen: {
