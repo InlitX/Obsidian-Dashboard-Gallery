@@ -1,0 +1,6 @@
+# Personal Obsidian config stays local — only the dashboard snippets are shared.
+.obsidian/*
+!.obsidian/snippets/
+
+# Leftovers from browser downloads
+*.crdownload
