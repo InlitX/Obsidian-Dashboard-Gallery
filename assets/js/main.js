@@ -31,9 +31,9 @@ const dashboardData = {
     haven: {
         titleKey: 'dashboards.haven',
         images: [
-            'images/dashboards/Haven/haven.png',
-            'images/dashboards/Haven/haven-2.png',
-            'images/dashboards/Haven/haven-3.png'
+            'images/dashboards/Haven/haven-library.png',
+            'images/dashboards/Haven/haven-table.png',
+            'images/dashboards/Haven/haven-calendar.png'
         ],
         videos: [],
         descKey: 'dashboards.haven.preview',
@@ -58,8 +58,8 @@ const dashboardData = {
     pixel: {
         titleKey: 'dashboards.pixel',
         images: [
-            'images/dashboards/Pixel/pixel.png',
-            'images/dashboards/Pixel/pixel-2.png'
+            'images/dashboards/Pixel/pixel-home.png',
+            'images/dashboards/Pixel/pixel-picker.png'
         ],
         videos: [],
         descKey: 'dashboards.pixel.preview',
