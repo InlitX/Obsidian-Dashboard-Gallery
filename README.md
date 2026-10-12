@@ -19,7 +19,7 @@
 
 ---
 
-Five home dashboards for Obsidian. Copy two files into your vault — a note and a CSS snippet — and your home note looks like the shots above. No build step, no theme lock-in.
+Six home dashboards for Obsidian. Copy two files into your vault — a note and a CSS snippet — and your home note looks like the shots above. No build step, no theme lock-in.
 
 Screenshots, video previews and the full breakdown of every dashboard live on **[obsidian.inlitx.xyz](https://obsidian.inlitx.xyz)**.
 
@@ -42,29 +42,30 @@ Loud blocks of colour, live weather, a big clock and photo cards for every area 
 </tr>
 <tr>
 <td width="50%" valign="top">
+<a href="images/Haven/haven.png"><img src="images/thumbs/haven.png" alt="Haven dashboard preview" width="100%"></a>
+<h3><a href="dashboards/Dashboard-Haven.md">Haven</a></h3>
+A cosy Notion-style home. Cover and page icon, callouts, a task database with Board, Table and Calendar views, a gallery of your notes, navigation, a clock and a daily check-in.<br><br>
+<img src="https://img.shields.io/badge/Dataview-1F2430?style=flat-square&logo=obsidian&logoColor=A78BFA" alt="Dataview">
+</td>
+<td width="50%" valign="top">
 <a href="images/Komorobi/komoribe.png"><img src="images/thumbs/komorebi.png" alt="Komorebi dashboard preview" width="100%"></a>
 <h3><a href="dashboards/Dashboard-Komorebi.md">Komorebi</a></h3>
 Terminal ricing with a soft edge. Collections, habit grid, weather, pomodoro and music.<br><br>
 <img src="https://img.shields.io/badge/Dataview-1F2430?style=flat-square&logo=obsidian&logoColor=A78BFA" alt="Dataview"> <img src="https://img.shields.io/badge/OpenWeatherMap-API%20key-B45309?style=flat-square&labelColor=1F2430&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjU5RTBCIiBzdHJva2Utd2lkdGg9IjIuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI0LjIiLz48cGF0aCBkPSJNMTIgMS44djIuNk0xMiAxOS42djIuNk00LjQgNC40bDEuOSAxLjlNMTcuNyAxNy43bDEuOSAxLjlNMS44IDEyaDIuNk0xOS42IDEyaDIuNk02LjMgMTcuN2wtMS45IDEuOU0xOS42IDQuNGwtMS45IDEuOSIvPjwvc3ZnPg==" alt="OpenWeatherMap"> <img src="https://img.shields.io/badge/QuickAdd-optional-0369A1?style=flat-square&labelColor=1F2430&logo=obsidian&logoColor=38BDF8" alt="QuickAdd">
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="images/Pixel/pixel-shots.png"><img src="images/thumbs/pixel.png" alt="Pixel dashboard preview" width="100%"></a>
 <h3><a href="dashboards/Dashboard-Pixel.md">Pixel</a></h3>
 Material 3 Expressive agenda with dynamic colour, shape morphing and spring motion. Tasks that write back to your notes, quick capture, a wavy progress meter and a picture from your vault — in light and dark.<br><br>
 <img src="https://img.shields.io/badge/Dataview-1F2430?style=flat-square&logo=obsidian&logoColor=A78BFA" alt="Dataview">
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 <a href="images/Zen/Dashboard-Zen.png"><img src="images/thumbs/zen.png" alt="Zen dashboard preview" width="100%"></a>
 <h3><a href="dashboards/Dashboard-Zen.md">Zen</a></h3>
 Minimal glass surfaces, habit tracking and a scrolling task pipeline.<br><br>
 <img src="https://img.shields.io/badge/Dataview-1F2430?style=flat-square&logo=obsidian&logoColor=A78BFA" alt="Dataview">
-</td>
-<td width="50%" valign="middle" align="center">
-<h3>Your dashboard here</h3>
-Built something beautiful? Share it with the community —<br>
-see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> to send a pull request.
 </td>
 </tr>
 </table>
