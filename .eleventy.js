@@ -15,6 +15,11 @@ module.exports = function(eleventyConfig) {
   // ── Ignore pages/ (old static prototypes) ──────────────────────────────
   eleventyConfig.ignores.add("pages");
 
+  // ── Cache busting ──────────────────────────────────────────────────────
+  // Every build stamps CSS/JS links with a fresh version, so browsers fetch
+  // the new files right after a deploy instead of reusing stale copies.
+  eleventyConfig.addGlobalData("assetVersion", String(Date.now()));
+
   // ── Filters ────────────────────────────────────────────────────────────
   eleventyConfig.addFilter("blogDate", function(dateObj) {
     if (!dateObj) return "";

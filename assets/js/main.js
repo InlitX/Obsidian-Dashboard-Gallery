@@ -32,7 +32,8 @@ const dashboardData = {
         titleKey: 'dashboards.haven',
         images: [
             'images/dashboards/Haven/haven.png',
-            'images/dashboards/Haven/haven-2.png'
+            'images/dashboards/Haven/haven-2.png',
+            'images/dashboards/Haven/haven-3.png'
         ],
         videos: [],
         descKey: 'dashboards.haven.preview',
